@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -14,8 +17,8 @@
 
 /* navber css */
 .navber{
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 20px auto; 
+    padding: 0 16px;
     max-width: 1200px;
     justify-content: space-between;
     text-align: center;
@@ -57,6 +60,7 @@
 }
 .banner-contant{
     max-width: 570px;
+    padding: 0 16px;
 }
 .banner-title{
     font-size: 3.2rem;
@@ -97,7 +101,6 @@
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    /* border: 1px solid red; */
     gap: 60px;
     padding: 36px 61px;
 }
@@ -131,10 +134,10 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
 }
 .collection-title{
     font-size: 1.7rem;
+    margin: 90px auto 29px auto;
     font-weight: 600;
     color: #3A3A3A;
     text-align: center;
@@ -144,12 +147,12 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
     gap: 30px;
 }
 .card{
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.117);
     padding: 17px;
+    height: 500px;
 }
 
 .card-img{
@@ -189,6 +192,12 @@
     margin-top: 15px;
     margin-bottom: 15px; 
 }   
+.see-more{
+    margin: 8px auto;
+    padding: 0 16px;
+    text-align: right;
+    color: #E02C6D;
+}
 
 /* featured css */
 
@@ -196,6 +205,7 @@
     max-width: 1110px;
     margin: 104px auto 100px auto;
     gap: 96px;
+    padding: 0 16px;
     align-items: center;
     justify-content: center;
 }
@@ -203,6 +213,7 @@
     max-width: 610px;
     height: 224px;
     margin: 0 auto;
+    padding: 0 16px;
 }
 .feature-title{
     font-size: 2.3rem;
@@ -231,78 +242,104 @@
 /* footer css */
 
 .footer{
-    background-color: #e65bff;
-
+    background-color: #E02C6D;
 }
 .footer-contanir{
     max-width: 262px;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 50px 16px;
-
+    padding: 16px;
+}
+.footer-title{
+    font-size: 1.4rem;
+    margin: 16px;
+    font-weight: 600;
+    color: #3A3A3A;
+}
+.footer-copy{
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    color: #f6baba;
+}
+.social-icon{
+    display: flex;
+    margin: 16px auto;
+    justify-content: center;
+    color: #FFFFFF;
+    gap: 16px;
+}
+.social-icon i{
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.social-icon i:hover{
+    color: #000000;     
+    transform: scale(1.2);
+}
 
 
 /* 📱 Mobile device (max-width: 576px) */
 @media screen and (max-width: 576px) {
- .nav-item{
+
+    .nav-item{
         display: none;  
     }
-.fa-bars{
-    display: block;
-}
-.logo{
-    font-size: 1rem;
-    align-items: center;
-    text-align: center;
-}
-.cart-icon{
-    display: block;
-}
-.cart-icon{
+
+    .fa-bars{
+        display: block;
+    }
+
+    .logo{
+        font-size: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-icon{
+        display: block;
         margin-left: 0;    
         right: 15px;
-}
-.banner-title{
-    font-size: 1.5rem;
-    
-} 
-.baneer-bio{
-    font-size: 0.8rem;
-}
-.camera{
+    }
+
+    .banner-title{
+        font-size: 1.5rem;
+    } 
+
+    .baneer-bio{
+        font-size: 0.8rem;
+    }
+
+    .camera{
         margin-top: 30px;
         width: 80%;
         max-width: 260px;   
         height: auto;
-}
-.featured{
-    flex-direction: column-reverse;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-.featured img{
-    width: 100%;
+    }
 
-  }
-   .feature-title{
-    font-size: 1.5rem;
-  }
-  .feture-bio{
-    font-size: 0.8rem;
-  }
+    .featured,
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .featured img{
+        width: 100%;
+    }
 
-.banner{
-    flex-direction: column-reverse;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-.sponsors-company{
+    .feature-title{
+        font-size: 1.5rem;
+    }
+
+    .feture-bio{
+        font-size: 0.8rem;
+    }
+
+    .sponsors-company{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 auto;
@@ -314,24 +351,158 @@
         width: 80%;
     }
 
-
-
     .collection-title{
         font-size: 1.5rem;
     }
+
     .card{
-        
         margin: 0 auto;
+    }
+
+    .card-title{
+        font-size: 1.4rem;
+    }
+
+    .card-price{
+        font-size: 1.2rem;
+    }
+
+    .card-contanir{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;  
+    }
+
+}/* ===============================
+   📱📲 Tablet device (577px – 768px)
+================================ */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .nav-item{
+        display: none;  
+    }
+
+    .fa-bars{
+        display: block;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+        align-items: center;
+        text-align: center;
+    }
+    .banner{
+        margin: 55px auto auto auto;
+    }
+    .banner-title,
+    .feature-title{
+        font-size: 1.8rem;
+    }
+
+    .baneer-bio,
+    .feture-bio,
+    .card-bio{
+        font-size: 0.9rem;
+    }
+    .sponsors-company img{
+        width: 100%;
+    }
+
+    .banner,
+    .featured{
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .camera{
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .sponsors-company{
+        grid-template-columns: repeat(7, 1fr);
+        gap: 19px;
+    }
+    .card{
+        height: 480px;
+    }
+    .card-contanir{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 0 16px;
     }
     .card-title{
         font-size: 1.4rem;
     }
+
+    .card-price{
+        font-size: 1.2rem;
+    }
+
+    .collection-title{
+        font-size: 1.5rem;
+    }
+   
+
+}
+
+/* ===============================
+   💻 Laptop device (769px – 1024px)
+================================ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .banner,
+    .featured{
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+      
+    .banner-title,
+    .feature-title{
+        font-size: 2.2rem;
+    }
+
+    .camera{
+        max-width: 400px;
+    }
+    .sponsors-company img{
+        width: 100%;
+    }
+    .sponsors-company{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .card{
+        padding: 0 26px;
+        height: 480px;
+    }
+     .card-title{
+        font-size: 1.4rem;
+    }
+
     .card-price{
         font-size: 1.2rem;
     }
     .card-contanir{
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;  
-    }  
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+/* ===============================
+   🖥️ Large screen (1025px+)
+================================ */
+@media screen and (min-width: 1025px) {
+
+    .banner-title{
+        font-size: 2.5rem;
+    }
+
+    .camera{
+        max-width: 500px;
+    }
+
+    .card-contanir{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
